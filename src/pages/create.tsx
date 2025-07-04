@@ -4,7 +4,7 @@ import API from '../lib/api';
 export default function CreateCelebrity() {
   const [prompt, setPrompt] = useState('');
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState<any[]>([]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
