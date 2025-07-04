@@ -22,13 +22,15 @@ export default function CreateCelebrity() {
     }
   };
 
-  const saveCelebrity = async (celeb) => {
-    try {
-      await API.post('/celebrities', celeb);
-      alert(`Saved: ${celeb.name}`);
-    } catch {
-      alert('Failed to save');
-    }
+ const saveCelebrity = async (celeb: Celebrity) => {
+  try {
+    await API.post('/celebrities', celeb);
+    alert(`Saved: ${celeb.name}`);
+  } catch (err) {
+    alert('Save failed');
+  }
+
+
   };
 
   return (
