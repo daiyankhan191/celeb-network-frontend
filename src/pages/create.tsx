@@ -6,7 +6,8 @@ export default function CreateCelebrity() {
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState([]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+
     e.preventDefault();
     if (!prompt) return;
     setLoading(true);
