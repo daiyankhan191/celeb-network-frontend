@@ -13,7 +13,8 @@ export default function CreateCelebrity() {
     setLoading(true);
     try {
       const res = await API.post('/celebrities/ai-suggest', { prompt });
-      setResults(res.data); // Should be array of { name, category, country, instagram }
+     setResults(res.data as any[]);
+ // Should be array of { name, category, country, instagram }
     } catch (err) {
       alert('AI suggestion failed');
     } finally {
